@@ -16,7 +16,7 @@ public class CameraController {
 
 
     @PostMapping
-    public Camera createCamera(Camera camera){
+    public Camera createCamera(@RequestBody Camera camera){
         camera.setId(null);
         return cameraService.save(camera);
     }
@@ -27,11 +27,11 @@ public class CameraController {
     }
 
     @DeleteMapping
-    public void delete(Camera camera){
+    public void delete(@RequestBody Camera camera){
         cameraService.deleteById(camera);
     }
     @PutMapping
-    public Camera update(Camera camera){
+    public Camera update(@RequestBody Camera camera){
         return cameraService.save(camera);
     }
 }
