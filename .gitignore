@@ -7,6 +7,7 @@ log.txt
 mvnw
 mvnw.cmd
 .mvn
+database
 ### STS ###
 .apt_generated
 .classpath
