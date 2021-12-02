@@ -7,7 +7,8 @@ import ru.sstu.backend.service.CameraService;
 
 import java.util.List;
 
-@RestController("/cameras")
+@RequestMapping("/cameras")
+@RestController
 @RequiredArgsConstructor
 public class CameraController {
 

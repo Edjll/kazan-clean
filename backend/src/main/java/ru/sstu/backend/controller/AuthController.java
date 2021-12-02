@@ -3,6 +3,7 @@ package ru.sstu.backend.controller;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 import ru.sstu.backend.config.JwtTokenProvider;
@@ -12,8 +13,8 @@ import ru.sstu.backend.entity.dto.AuthDTO;
 import ru.sstu.backend.entity.dto.TokenDTO;
 import ru.sstu.backend.service.UserService;
 
-@RestController("/auth")
-
+@RequestMapping("/auth")
+@RestController
 public class AuthController {
     private final JwtTokenProvider tokenProvider;
     private final UserService userService;
